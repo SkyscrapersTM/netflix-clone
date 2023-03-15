@@ -12,6 +12,7 @@ module.exports = {
   plugins: ['react'],
   rules: {
     'space-before-function-paren': 'off',
-    'react/react-in-jsx-scope': 'off'
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off'
   }
 }
