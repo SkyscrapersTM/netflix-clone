@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'MiFuente';
+  src: url('./assets/NetflixSans_W_Rg.woff2') format('woff2');
+}
+
 *,
 *::after,
 *::before {
@@ -6,5 +11,6 @@
 }
 
 .app {
+  font-family: 'MiFuente', sans-serif;
   background-color: #111;
 }
