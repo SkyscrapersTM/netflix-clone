@@ -1,0 +1,35 @@
+.plans__plan {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  opacity: 0.8;
+}
+
+.plans__plan:hover {
+  opacity: 1;
+}
+
+.plans__info > h5,
+h6 {
+  font-weight: 500;
+}
+
+.plans__plan > button {
+  padding: 2px 8px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #e50914;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.plans__plan--disabled > button {
+  background-color: gray !important;
+}
+
+@media only screen and (min-width: 600px) {
+  .plans__plan > button {
+    padding: 10px 20px;
+  }
+}
