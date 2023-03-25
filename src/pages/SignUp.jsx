@@ -9,11 +9,10 @@ const SignUp = () => {
   const handleSignUp = async (e) => {
     e.preventDefault()
     try {
-      const userCredential = await auth.createUserWithEmailAndPassword(
+      await auth.createUserWithEmailAndPassword(
         emailRef.current.value,
         passwordRef.current.value
       )
-      console.log(userCredential)
     } catch (error) {
       alert(`${error.message}\nComplete the form to create your credential.`)
     }
@@ -22,11 +21,10 @@ const SignUp = () => {
   const handleSignIn = async (e) => {
     e.preventDefault()
     try {
-      const userCredential = await auth.signInWithEmailAndPassword(
+      await auth.signInWithEmailAndPassword(
         emailRef.current.value,
         passwordRef.current.value
       )
-      console.log(userCredential)
     } catch (error) {
       alert(error.message)
     }
