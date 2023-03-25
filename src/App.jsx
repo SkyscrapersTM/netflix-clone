@@ -6,6 +6,7 @@ import Login from './pages/Login'
 import { auth } from './services/firebase'
 import { useDispatch, useSelector } from 'react-redux'
 import { login, logout } from './redux/state/userSlice'
+import Profile from './pages/Profile'
 
 function App() {
   const user = useSelector((state) => state.user.user)
@@ -22,11 +23,11 @@ function App() {
         )
       } else {
         // Logged out
-        dispatch(logout)
+        dispatch(logout())
       }
     })
     return unsuscribe
-  }, [])
+  }, [dispatch])
   return (
     <div className='app'>
       <Router>
@@ -34,6 +35,7 @@ function App() {
           ? (<Login />)
           : (
             <Routes>
+              <Route path='/profile' element={<Profile />}/>
               <Route exact path='/' element={<Home />} />
             </Routes>
             )}
